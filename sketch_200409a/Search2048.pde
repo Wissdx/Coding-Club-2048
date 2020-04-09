@@ -1,3 +1,5 @@
+import java.io.*;
+
 Player p;
 boolean released = true;
 boolean teleport = false;
@@ -48,22 +50,26 @@ void draw() {
 
 void keyPressed() {
   if (released) {
-    if (keyCode == 87 || keyCode == UP){ 
+    if (keyCode == 87 || keyCode == UP){
+      Thread.sleep(3000);
       p.moveDirection.y = -1;
       p.moveDirection.x = 0;
       p.moveTiles();
     }
     else if (keyCode == 83 || keyCode == DOWN){
+      Thread.sleep(3000);
       p.moveDirection.y = 1;
       p.moveDirection.x = 0;
       p.moveTiles();
     }
     else if (keyCode == 65 || keyCode == LEFT){
+      Thread.sleep(3000);
       p.moveDirection.x = -1;
       p.moveDirection.y = 0;
       p.moveTiles();
     }
     else if (keyCode == 68 || keyCode == RIGHT){
+      Thread.sleep(3000);
       p.moveDirection.x = 1;
       p.moveDirection.y = 0;
       p.moveTiles();
